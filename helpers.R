@@ -6,7 +6,7 @@ drop_buttons <- function(url = NULL,
     obj <- paste0(obj, "<a href='", url[[i]],"' target='_blank'><img src = '", img[[i]], "' width='", wid[[i]], "%' alt='", url[[i]], "' itemprop='image'/></a>", collapse="")
   }
   
-    obj <- paste0("\n\n<hr><div id =\"buttons\">\n<p>", obj, "</p></div>\n", collapse="")
+    obj <- paste0("\n\n<hr>\n<p>", obj, "</p>\n", collapse="")
   return(obj)
 }
 
@@ -322,6 +322,10 @@ border: 0;
 font-size: 100%;
 font: inherit;
 vertical-align: baseline;
+}
+
+html {
+        min-width: 1000px;
 }
 
 body {
@@ -653,18 +657,10 @@ border-bottom-style: solid;
 article hr {
 	background:none;
 	clear:both;
-	float:none;
 	width:100%;
 	height:1px;
 	border:none;
 	margin:-1px 0;
-}
-
-buttons {
-width:60%;
-margin: 15px 15px 0;
-padding: 0 10px 0;
-text-align: right;
 }
 
 /*
@@ -796,6 +792,9 @@ width: 45%;
 Smartphone
 */
 @media screen and (max-width: 600px) {
+html {
+        min-width: 120px;
+}
 body {
 font-size: 20px;
 }
