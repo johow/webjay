@@ -283,6 +283,10 @@ html, body {
 height: 100%;
 }
 
+html {
+        min-width: 100%;
+}
+
 #page-wrap {
 background: white;
 min-width: 780px;
@@ -322,10 +326,6 @@ border: 0;
 font-size: 100%;
 font: inherit;
 vertical-align: baseline;
-}
-
-html {
-        min-width: 800px;
 }
 
 body {
