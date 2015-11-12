@@ -325,7 +325,7 @@ vertical-align: baseline;
 }
 
 html {
-        min-width: 1000px;
+        min-width: 800px;
 }
 
 body {
