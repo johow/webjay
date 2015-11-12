@@ -1,14 +1,8 @@
 # coding
 
-<p>My most recent projects include</p>
-
-<ul>
-<li><p>A <a href="https://johow.shinyapps.io/PedigreeShiny2">shinyapp</a> demonstrating the functionality of my <a href="https://www.github.com/johow/kinlab">&#39;kinlab&#39;</a> package for R.
-</p></li>
-<li><p>A <a href="https://johow.shinyapps.io/confproc">shinyapp</a> for the automated generation of the book-of-abstracts for a scietific conference (<a href="https://www.github.com/johow/confpro">see code</a>)
-</p></li>
-<li><p>The <a href="https://www.github.com/johow/webjay">static site generator</a> building these pages. 
-</p></li>
-</ul>
-
-<p>I am working with [R](https://cran.r-project.org) on a regular basis since 2009, mostly out of needs of [my research](research). Typical applications include the management and analysis of spatiotemporal event histories within large (historical) genealogies, modelling of multistate event histories, and generation of dynamic reports including development of suitable visualization methods. Both <a href="pdf/Johow-DA_2009.pdf">my diploma thesis</a> and <a href="http://geb.uni-giessen.de/geb/volltexte/2013/9371/pdf/JohowJohannes_2013_03_07.pdf">my dissertation</a> have been written by using R/LaTeX (recently via <a href="http://yihui.name/knitr/">knitr</a>).</p>
+My most recent projects include
+- A [shinyapp](https://johow.shinyapps.io/PedigreeShiny2) demonstrating the functionality of my [kinlab](https://www.github.com/johow/kinlab) package for R.  
+- A [shinyapp](https://johow.shinyapps.io/confproc) for the automated generation of the book-of-abstracts for scientific conferences, [see code on Github](https://www.github.com/johow/confpro).  
+- The [static site generator](https://www.github.com/johow/webjay) building these pages.  
+  
+I am working with [R](https://cran.r-project.org) on a regular basis since 2009, mostly out of needs of [my research](research.html). Both [my diploma thesis](pdf/Johow-DA_2009.pdf) and [my dissertation](http://geb.uni-giessen.de/geb/volltexte/2013/9371/pdf/JohowJohannes_2013_03_07.pdf) have been written with R/LaTeX, recently via [knitr](http://yihui.name/knitr/).  
