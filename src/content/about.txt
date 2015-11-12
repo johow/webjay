@@ -1,0 +1,5 @@
+### about
+
+A portfolio of my work, delivered from plain Rmarkdown Text, a (slightly modified) template created by [n-gin](https://github.com/n-gin), and a [shinyapp framework in R](https://github.com/johow/webjay).
+
+<img src='img/johow.jpg', width='100%' alt='JJ' itemprop='image'/>

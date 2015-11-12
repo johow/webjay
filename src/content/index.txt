@@ -1,0 +1,7 @@
+### Welcome
+
+I am an evolutionary biologist studying the [life history evolution](http://www.nature.com/scitable/knowledge/library/life-history-evolution-68245673) and [behavioral ecology](http://www.els.net/WileyCDA/ElsArticle/refId-a0003671.html) of humans in the context of kinship. A brief summary of my research and past findings can be found in [this quick overview](research.html). Of course, my publications listed at [Google scholar](https://scholar.google.de/citations?user=okz5ucIAAAAJ) or [ResearchGate](https://www.researchgate.net/profile/Johannes_Johow) could be considered as well. If you would like to analyze some of the data on your own, try [this shinyapp (written in German)](https://johow.shinyapps.io/PedigreeShiny2).
+  
+Since a lot of programming is required in my studies, I have developed greatest passion for [R](https://www.r-project.org) and its rapidly growing ecosystem including [Rstudio](https://www.rstudio.com), [CRANberries](http://dirk.eddelbuettel.com/cranberries/), and [R-bloggers](https://www.r-bloggers.com). 
+
+By the way, production and maintenance of these pages also occur in a shinyapp, which serves as static site generator by putting together all HTML5/CSS output from a few markdown textfiles in my dropbox. 
