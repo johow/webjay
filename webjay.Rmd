@@ -1,7 +1,7 @@
 ---
 title: "Webjay Static Site Generator"
 author: "Johannes Johow"
-date: "Version 0.3 (2015-09-29)"
+date: "Version 0.31 (2015-11-12)"
 output: html_document
 runtime: shiny
 ---
@@ -38,7 +38,7 @@ files2folder(input, src_path=input$src_folder, dest_path=input$my_folder)
 )
 
 shinyUI(fluidPage(
-  titlePanel("Webjay Version 0.3"),
+  titlePanel("Webjay Static Site Generator"),
   sidebarLayout(
     sidebarPanel(
       inputPanel(h2("Markdown Sources"), 
