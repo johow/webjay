@@ -4,4 +4,4 @@ I am an evolutionary biologist studying the [life history evolution](http://www.
   
 Since a lot of programming is required in my studies, I have developed greatest passion for [R](https://www.r-project.org) and its rapidly growing ecosystem including [Rstudio](https://www.rstudio.com), [CRANberries](http://dirk.eddelbuettel.com/cranberries/), and [R-bloggers](https://www.r-bloggers.com). 
 
-By the way, production and maintenance of these pages also occur in a shinyapp, which serves as static site generator by putting together all HTML5/CSS output from a few markdown textfiles in my dropbox. 
+By the way, production and maintenance of these pages also occur [in a shinyapp](https://github.com/johow/webjay), which serves as a static site generator putting together all HTML5/CSS output from some markdown textfiles in my dropbox. 

@@ -1,6 +1,7 @@
 # coding
 
 My most recent projects include
+- A [shinyapp extracting URLs from webpages](https://johow.shinyapps.io/japer).  
 - A [shinyapp](https://johow.shinyapps.io/PedigreeShiny2) demonstrating the functionality of my [kinlab](https://www.github.com/johow/kinlab) package for R.  
 - A [shinyapp](https://johow.shinyapps.io/confproc) for the automated generation of the book-of-abstracts for scientific conferences, [see code on Github](https://www.github.com/johow/confpro).  
 - The [static site generator](https://www.github.com/johow/webjay) building these pages.  

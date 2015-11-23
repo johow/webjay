@@ -1,5 +1,8 @@
 ### about
 
-A portfolio of my work, delivered from plain Rmarkdown Text, a (slightly modified) template created by [n-gin](https://github.com/n-gin), and a [shinyapp framework in R](https://github.com/johow/webjay).
+A portfolio of my work, delivered from plain Rmarkdown Text, a (slightly modified) template created by [n-gin](https://github.com/n-gin), and a [shinyapp framework in R](https://github.com/johow/webjay). You can download my detailed   
+[CV (pdf)](pdf/jj-vita.pdf) or [drop me a note](mailto:johannes.johow@gmx.de).  
+  
+Dr. Johannes Johow, Gießen im November 2015 
 
 <img src='img/johow.jpg', width='100%' alt='JJ' itemprop='image'/>
