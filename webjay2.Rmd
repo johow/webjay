@@ -1,0 +1,92 @@
+---
+title: "Webjay Static Site Generator"
+author: "Johannes Johow"
+date: "Version 0.31 (2015-11-12)"
+output: html_document
+runtime: shiny
+---
+
+This R Markdown document can generate [my personal website](http://joh.one).
+
+```{r, echo=FALSE, message=890:900}
+
+library(brotli) 
+library(dplyr)
+library(digest)
+library(rdrop2)
+library(shinyjs)
+library(shiny)
+library(RCurl)
+library(markdown) 
+source("helpers.R")
+
+
+
+observeEvent(input$update, {
+      updateColourInput(session, "colUpdate",
+                        value = input$text, showColour = input$showColour,
+                        palette = input$palette,
+                        allowTransparent = input$allowTransparent)
+  })
+
+observeEvent(input$built, {
+files2folder(input, src_path=input$src_folder, dest_path=input$my_folder)
+ output$list_files <- renderText(paste("\n", c(paste0("Files in \"", file.path(input$my_folder, "out"), "\":"),
+    unlist(list.files(file.path(input$my_folder,"out"), recursive = TRUE, include.dirs = FALSE)))))
+ if(input$dropbox==TRUE){
+ if(!any(input$dropbox_pdf | input$dropbox_img)){my_dirs<- NULL}
+         else{
+ if(input$dropbox_pdf==input$dropbox_img){my_dirs<- c("img", "pdf")}
+ else{c("img", "pdf")[which(c(input$dropbox_pdf, input$dropbox_img))]}
+         }
+   drop_folder(from=file.path(input$my_folder, "out"), to=input$dropbox_folder, dirs=my_dirs)}
+ browseURL(file.path(input$my_folder,"out", "index.html"))
+}
+)
+
+shinyUI(fluidPage(
+  titlePanel("Webjay Static Site Generator"),
+  sidebarLayout(
+    sidebarPanel(
+      inputPanel(  h2("Generate Files"), 
+     actionButton("built", "Process", class = "btn-primary")),
+      inputPanel(h2("Markdown Sources"), 
+                  textInput( "src_folder", "Path to folder", value = getwd())),
+      inputPanel(h2("Temp Directory"), 
+                  textInput( "my_folder", "Path to folder", value = tempdir())),
+      renderPlot({
+      op <- par(mar = rep(0, 4), omi = rep(0, 4))
+      plot(rep(1,100),col=colorRampPalette(c(input$col1, input$col2))(100),pch="|",cex=20, axes = FALSE,
+           xlab = "", ylab="", ylim = c(.99,1.01))
+      par(op)
+      }),
+     verbatimTextOutput("list_files")),    
+    mainPanel(
+            inputPanel(
+  h2("Dropbox"), 
+ checkboxInput("dropbox", "Upload to Dropbox", value = FALSE),
+  textInput("dropbox_folder", "Dropbox folder", value = "webjayOutput"),
+ checkboxInput("dropbox_pdf", "include PDFs", value = FALSE),
+ checkboxInput("dropbox_img", "include IMGs", value = FALSE)),
+      inputPanel(
+    h2("Specify Header"),
+        textInput("name", "Your name", value = "Johannes Johow"),
+      textInput("title", "Website title", value = "Evolutionary Research | Data Analysis | Software Engineering"),
+      textInput("submenu", "Submenu elements", value = "about vita newsfeeds")), inputPanel( 
+  textInput("b_url", "Buttons Urls", value = "https://www.facebook.com/johannes.johow https://soundcloud.com/akativ https://www.researchgate.net/profile/Johannes_Johow https://scholar.google.de/citations?user=okz5ucIAAAAJ https://github.com/johow"), 
+textInput("b_img", "Buttons Images", value = "img/facebook.png img/soundcloud.png img/ResearchGate.png img/Google_Scholar.png img/github.png"),  
+textInput("b_wid", "Buttons Widths", value = "10 10 20 20 10"),
+        h2("Choose Background"),    
+  colourInput("col1", "Choose first color", "#a7b473"),
+      colourInput("col2", "Choose second color", "#577538", allowTransparent = TRUE),
+        textInput("favicon", "Favicon (NULL if none)", value="img/favicon.ico")),
+         inputPanel(
+ h2("FTP Upload"), 
+ checkboxInput("ftp", "Upload via FTP", value = FALSE),
+  textInput("ftp_host", "FTP Host", value = "ftp.joh.one"),  
+  textInput("ftp_user", "FTP Username", value = "joh.one"),  
+  passwordInput("ftp_pw", "FTP Password", value="oav_23gS"))
+))
+))
+
+```
