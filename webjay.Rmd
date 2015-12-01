@@ -54,8 +54,9 @@ shinyUI(fluidPage(
                   textInput( "my_folder", "Path to folder", value = tempdir())),
       inputPanel(
     h2("Specify Header"),
+        textInput("site", "Title", value = "dajo.de"),
         textInput("name", "Your name", value = "Johannes Johow"),
-      textInput("title", "Website title", value = "Evolutionary Research | Data Analysis | Software Engineering"),
+      textInput("title", "Keywords", value = "Evolutionary Research | Data Analysis | Software Engineering"),
       textInput("submenu", "Submenu elements", value = "about vita newsfeeds")), inputPanel( 
   textInput("b_url", "Buttons Urls", value = "https://www.facebook.com/johannes.johow https://soundcloud.com/akativ https://www.researchgate.net/profile/Johannes_Johow https://scholar.google.de/citations?user=okz5ucIAAAAJ https://github.com/johow"), 
 textInput("b_img", "Buttons Images", value = "img/facebook.png img/soundcloud.png img/ResearchGate.png img/Google_Scholar.png img/github.png"),  
@@ -69,7 +70,7 @@ textInput("b_wid", "Buttons Widths", value = "10 10 20 20 10"),
  checkboxInput("ftp", "Upload via FTP", value = FALSE),
   textInput("ftp_host", "FTP Host", value = "ftp.joh.one"),  
   textInput("ftp_user", "FTP Username", value = "joh.one"),  
-  passwordInput("ftp_pw", "FTP Password", value="oav_23gS")), 
+  passwordInput("ftp_pw", "FTP Password", value="NULL")), 
          inputPanel(
   h2("Dropbox"), 
  checkboxInput("dropbox", "Upload to Dropbox", value = FALSE),

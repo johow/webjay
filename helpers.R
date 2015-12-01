@@ -47,7 +47,7 @@ files2folder_pt1 <- function(input=NULL,
                                          options=c("fragment_only")), collapse="")
                                 close(file(tmp_con))
   tmp_con <- file.path(dest_path, "out", "index.html")
-  toFile(index_lines(content=index_body, href_favicon="input_favicon", 
+  toFile(index_lines(content=index_body, href_favicon= paste(input$favicon), 
                      my_buttons=drop_buttons(url = strsplit(input$b_url, " "),
                                                     img = strsplit(input$b_img, " "),
                                                     wid = strsplit(input$b_wid, " ")))[["html"]],
