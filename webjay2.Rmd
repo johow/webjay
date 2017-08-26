@@ -78,7 +78,7 @@ textInput("b_img", "Buttons Images", value = "img/facebook.png img/soundcloud.pn
 textInput("b_wid", "Buttons Widths", value = "10 10 20 20 10"),
         h2("Choose Background"),    
   colourInput("col1", "Choose first color", "#a7b473"),
-      colourInput("col2", "Choose second color", "#577538", allowTransparent = TRUE),
+      colourInput("col2", "Choose second color", "#577538", allowAlpha = TRUE),
         textInput("favicon", "Favicon (NULL if none)", value="img/favicon.ico")),
          inputPanel(
  h2("FTP Upload"), 
