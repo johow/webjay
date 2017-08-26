@@ -26,7 +26,7 @@ observeEvent(input$update, {
       updateColourInput(session, "colUpdate",
                         value = input$text, showColour = input$showColour,
                         palette = input$palette,
-                        allowTransparent = input$allowTransparent)
+                        allowAlpha = input$allowTransparent)
   })
 
 observeEvent(input$built, {
